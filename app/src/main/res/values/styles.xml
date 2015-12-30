@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Custom Style - @author Umesh - Axovel Private Limited -->
+    <style name="TransparentInput" parent="@android:style/TextAppearance.Holo.Widget.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="BtnTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/veiw_right_left_padding</item>
+        <item name="android:paddingBottom">@dimen/veiw_right_left_padding</item>
+        <item name="android:paddingLeft">@dimen/veiw_bottom_up_margin</item>
+        <item name="android:paddingRight">@dimen/veiw_bottom_up_margin</item>
+        <item name="android:textSize">@dimen/txt_normal_big</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_selector</item>
+    </style>
+
+</resources>
