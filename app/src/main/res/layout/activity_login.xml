@@ -119,6 +119,16 @@
             android:layout_margin="5dp"
             android:layout_marginBottom="@dimen/veiw_bottom_up_margin"
             android:text="@string/signup" />
+
+        <Button
+            android:id="@+id/btnGuestLogin"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSignUp"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="@dimen/veiw_bottom_up_margin"
+            android:text="@string/guest" />
     </RelativeLayout>
 
 </RelativeLayout>

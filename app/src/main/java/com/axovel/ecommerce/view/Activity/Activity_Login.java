@@ -1,10 +1,10 @@
 package com.axovel.ecommerce.view.Activity;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,20 +22,23 @@ import com.axovel.ecommerce.R;
 /*  @author Umesh Chauhan
  *   Axovel Private Limited
  */
-public class Activity_Login extends AppCompatActivity {
+public class Activity_Login extends Activity {
 
     private EditText txtUserName;
     private EditText txtPassword;
     private TextView txtError;
     private int backButtonCount=0;
+    Activity actLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        actLogin = this;
         // Getting Views
         RelativeLayout rlLoginBox = (RelativeLayout) findViewById(R.id.rlLoginBox);
         Button btnSignIn = (Button) findViewById(R.id.btnSignIn);
         Button btnSignUp = (Button) findViewById(R.id.btnSignUp);
+        Button btnGuestLogin = (Button) findViewById(R.id.btnGuestLogin);
         txtUserName = (EditText) findViewById(R.id.edtxtUsername);
         txtPassword = (EditText) findViewById(R.id.edtxtPassword);
         txtError = (TextView) findViewById(R.id.txtErr);
@@ -112,6 +115,13 @@ public class Activity_Login extends AppCompatActivity {
                 }
                 DialogFragment dialog = new SignUp();
                 dialog.show(getFragmentManager(), "SignUp");
+            }
+        });
+        btnGuestLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(actLogin, Activity_Ecomm_Base.class);
+                startActivity(i);
             }
         });
     }

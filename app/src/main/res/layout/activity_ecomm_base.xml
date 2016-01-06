@@ -34,23 +34,32 @@
         <FrameLayout
             android:id="@+id/frame_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/rlBanner">
         </FrameLayout>
+        <!-- LinearLayout for Home page -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame_container">
+        <LinearLayout
+            android:id="@+id/ll_container_home"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
 
-    <!-- Listview to display slider menu -->
-    <ListView
-        android:id="@+id/list_slidermenu"
+    <!-- Container for tree view to display slider menu -->
+    <RelativeLayout
+        android:id="@+id/navDrawerContainer"
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/list_background"
-        android:choiceMode="singleChoice"
-        android:divider="@color/list_divider"
-        android:dividerHeight="1dp"
-        android:listSelector="@drawable/drawer_list_selector" />
+        android:background="@color/black"></RelativeLayout>
+
+
 
 
 </android.support.v4.widget.DrawerLayout>

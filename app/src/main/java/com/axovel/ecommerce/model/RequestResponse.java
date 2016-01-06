@@ -1,5 +1,7 @@
 package com.axovel.ecommerce.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Umesh Chauhan on 24-12-2015.
  * Axovel Private Limited
@@ -69,6 +71,14 @@ public class RequestResponse {
         this.bannerImgUrl = bannerImgUrl;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     // App/Framework Version Check
     private String frameworkVersion;
     private String appVersion;
@@ -81,4 +91,53 @@ public class RequestResponse {
     private String email;
     // Banner
     private String bannerImgUrl;
+    // Products
+    private String category;
+    private  String cost;
+
+    public String getCost() {
+        return cost;
+    }
+
+    public void setCost(String cost) {
+        this.cost = cost;
+    }
+
+    public ArrayList<RequestResponse> getProducts() {
+        return products;
+    }
+
+    public void setProducts(ArrayList<RequestResponse> products) {
+        this.products = products;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getShortDesc() {
+        return shortDesc;
+    }
+
+    public void setShortDesc(String shortDesc) {
+        this.shortDesc = shortDesc;
+    }
+
+    private ArrayList<RequestResponse> products;
+    private String productName;
+    private String shortDesc;
+
+    public String getImgURL() {
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
+    }
+
+    private String imgURL;
 }

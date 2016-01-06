@@ -1,11 +1,12 @@
 package com.axovel.ecommerce.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Umesh Chauhan on 29-12-2015.
  * Axovel Private Limited
  */
 public class NavDrawer {
-    private String title;
     private String iconUrl;
     private String count = "0";
     // boolean to set visibility of the counter
@@ -21,24 +22,6 @@ public class NavDrawer {
 
     private String id;
 
-    public NavDrawer(){}
-
-    public NavDrawer(String title, String iconUrl){
-        this.title = title;
-        this.iconUrl = iconUrl;
-    }
-
-    public NavDrawer(String title, String iconUrl, boolean isCounterVisible, String count){
-        this.title = title;
-        this.iconUrl = iconUrl;
-        this.isCounterVisible = isCounterVisible;
-        this.count = count;
-    }
-
-    public String getTitle(){
-        return this.title;
-    }
-
     public String getIconUrl(){
         return this.iconUrl;
     }
@@ -49,10 +32,6 @@ public class NavDrawer {
 
     public boolean getCounterVisibility(){
         return this.isCounterVisible;
-    }
-
-    public void setTitle(String title){
-        this.title = title;
     }
 
     public void setIconUrl(String iconUrl){
@@ -66,4 +45,32 @@ public class NavDrawer {
     public void setCounterVisibility(boolean isCounterVisible){
         this.isCounterVisible = isCounterVisible;
     }
+    private String category;
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getSubCategoryName() {
+        return subCategoryName;
+    }
+
+    public void setSubCategoryName(String subCategoryName) {
+        this.subCategoryName = subCategoryName;
+    }
+
+    public ArrayList<NavDrawer> getSubCategory() {
+        return subCategory;
+    }
+
+    public void setSubCategory(ArrayList<NavDrawer> subCategory) {
+        this.subCategory = subCategory;
+    }
+
+    private ArrayList<NavDrawer> subCategory;
+    private String subCategoryName;
 }

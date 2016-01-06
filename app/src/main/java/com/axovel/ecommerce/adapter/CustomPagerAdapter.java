@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import com.axovel.ecommerce.R;
 import com.axovel.ecommerce.model.RequestResponse;
 import com.axovel.ecommerce.util.ImageLoadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -45,7 +46,10 @@ public class CustomPagerAdapter extends PagerAdapter {
         View itemView = mLayoutInflater.inflate(R.layout.layout_banner, container, false);
 
         ImageView imgBanner = (ImageView) itemView.findViewById(R.id.imgBanner);
-        new ImageLoadTask(bannerUrl.get(position).getBannerImgUrl(), imgBanner, position).execute();
+        Picasso.with(mContext).load(bannerUrl.get(position).getBannerImgUrl())
+                .error(R.mipmap.ic_launcher)
+                .placeholder(R.drawable.placeholder)
+                .into(imgBanner);
 
         container.addView(itemView);
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/txtCategoryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABC"
+        android:textSize="@dimen/txt_normal_big"/>
+
+    <view
+        android:id="@+id/recycler_view_productlist"
+        class="android.support.v7.widget.RecyclerView"
+        android:layout_below="@+id/txtCategoryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp" />
+</RelativeLayout>

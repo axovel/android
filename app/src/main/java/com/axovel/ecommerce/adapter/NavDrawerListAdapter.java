@@ -55,7 +55,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
         ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
         TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
         TextView txtCount = (TextView) convertView.findViewById(R.id.counter);
-        // get Images from URL
+        /*// get Images from URL
         new ImageLoadTask(navDrawer.get(position).getIconUrl(), imgIcon, position).execute();
         txtTitle.setText(navDrawer.get(position).getTitle());
 
@@ -66,7 +66,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
         }else{
             // hide the counter view
             txtCount.setVisibility(View.GONE);
-        }
+        }*/
         return convertView;
     }
 }
