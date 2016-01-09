@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_app"
+    tools:context=".view.Activity.Activity_Login">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlLoginBox"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/veiw_bottom_up_margin"/>
+
+    <RelativeLayout
+        android:id="@+id/rlLoginBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_loginbox"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rlUserName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtxt_height"
+            android:layout_alignParentRight="true"
+            android:background="@color/input_box_color"
+            android:layout_margin="5dp"
+            android:padding="5dp" >
+
+            <EditText
+                android:id="@+id/edtxtUsername"
+                style="@style/TransparentInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="@string/user_name"
+                android:paddingLeft="2dp" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edtxt_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/input_box_color"
+            android:layout_below="@+id/rlUserName"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/edtxtPassword"
+                style="@style/TransparentInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="2dp" >
+
+            </EditText>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtErr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rlPassword"
+            android:layout_below="@+id/rlPassword"
+            android:gravity="center_vertical"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/red"
+            android:text="Err"></TextView>
+
+        <Button
+            android:id="@+id/btnSignIn"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtErr"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="@dimen/veiw_bottom_up_margin"
+            android:text="@string/signin" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSignIn"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="@dimen/veiw_bottom_up_margin"
+            android:text="@string/signup" />
+
+        <Button
+            android:id="@+id/btnGuestLogin"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSignUp"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="@dimen/veiw_bottom_up_margin"
+            android:text="@string/guest" />
+    </RelativeLayout>
+
+</RelativeLayout>

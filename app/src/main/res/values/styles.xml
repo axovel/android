@@ -1,0 +1,50 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/text_color_sweets_choice</item>
+        <item name="android:actionMenuTextColor">@color/text_color_sweets_choice</item>
+        <item name="android:actionBarStyle"   tools:ignore="NewApi">@style/MyActionBar</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background"  tools:ignore="NewApi">@color/red</item>
+        <item name="background">@color/text_color_sweets_choice</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Custom Style - @author Umesh - Axovel Private Limited -->
+    <style name="TransparentInput" parent="@android:style/TextAppearance.Holo.Widget.EditText">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_color_sweets_choice</item>
+        <item name="android:textColorHint">@color/btn_start_color</item>
+    </style>
+
+    <style name="BtnTheme">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/veiw_right_left_padding</item>
+        <item name="android:paddingBottom">@dimen/veiw_right_left_padding</item>
+        <item name="android:paddingLeft">@dimen/veiw_bottom_up_margin</item>
+        <item name="android:paddingRight">@dimen/veiw_bottom_up_margin</item>
+        <item name="android:textSize">@dimen/txt_normal_big</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_selector</item>
+    </style>
+    <style name="TreeNodeStyleCustom">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+    </style>
+
+    <style name="TreeNodeStyleDivided">
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+    </style>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/nav_drawer_unselected">
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/veiw_bottom_up_margin"
+        android:textSize="@dimen/txt_large"
+        android:layout_centerHorizontal="true"
+        android:text="ABC"/>
+    <ImageView
+        android:id="@+id/txtProductImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/veiw_bottom_up_margin"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/txtProductName"
+        android:src="@drawable/placeholder"/>
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llThumbImg"
+        android:layout_below="@+id/txtProductImg"></LinearLayout>
+
+    <TextView
+        android:id="@+id/txtProductStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llThumbImg"
+        android:paddingLeft="@dimen/veiw_right_left_padding"
+        android:layout_marginTop="@dimen/veiw_bottom_up_margin"
+        android:textSize="@dimen/txt_large"
+        android:text="In Stock"/>
+
+    <TextView
+        android:id="@+id/txtProductCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductStatus"
+        android:paddingLeft="@dimen/veiw_right_left_padding"
+        android:layout_marginTop="@dimen/veiw_bottom_up_margin"
+        android:textSize="@dimen/txt_large"
+        android:text="₹"/>
+    <Button
+        android:id="@+id/btnAddCart"
+        style="@style/BtnTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProductDecs"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="@dimen/veiw_bottom_up_margin"
+        android:text="@string/add_to_cart" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBarProduct"
+        android:layout_below="@+id/txtProductCost" />
+
+    <TextView
+        android:id="@+id/txtProductDecs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBarProduct"
+        android:paddingLeft="@dimen/veiw_right_left_padding"
+        android:layout_marginTop="@dimen/veiw_bottom_up_margin"
+        android:textSize="@dimen/txt_large"
+        android:text="Product Description\n\n"/>
+</RelativeLayout>
+</ScrollView>

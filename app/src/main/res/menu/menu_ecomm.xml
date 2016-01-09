@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.axovel.ecommerce.sweetschoice.EcommStart">
+
+    <!-- Cart -->
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@mipmap/ic_cart"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:title="@string/cart"/>
+
+    <!-- Logout -->
+    <item
+        android:id="@+id/action_overflow"
+        android:icon="@mipmap/ic_action_overflow"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        android:title="@string/action_logout">
+        <menu>
+            <!-- Logout -->
+            <item
+                android:id="@+id/logout"
+                app:showAsAction="never|collapseActionView"
+                android:title="@string/action_logout"/>
+        </menu>
+    </item>
+
+</menu>
